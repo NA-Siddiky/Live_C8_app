@@ -24,7 +24,7 @@
 <div class="container">
   <br />
   <div class="jumbotron">
-    <h1 class="display-4 text-center">Send Message</h1>
+    <h1 class="display-4">Send Message</h1>
     <br />
     <input id="name" class="form-control" placeholder="Name" />
     <br />
@@ -57,12 +57,12 @@
   }
 
   function getMessages() {
-    $.get("http://localhost:3500/messages", (data) => {
+    $.get("http://localhost:3000/messages", (data) => {
       data.forEach(addMessage);
     });
   }
 
   function postMessage(message) {
-    $.post("http://localhost:3500/messages", message);
+    $.post("http://localhost:3000/messages", message);
   }
 </script>
